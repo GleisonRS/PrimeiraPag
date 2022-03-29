@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
     <title>Document</title>
+ 
 </head>
 
 <body>
@@ -63,14 +65,21 @@
 
    
      <form action="">
-         <label for="Nome">Nome:</label>
-         <input type="text" id="nome" name="nomeUsuario"><br>
-         <br>
-         <label for="e-mail">E-mail:</label>
-         <input type="text" id="e-mail" name="e-mailUsuario"><br>
-         <br>
-         <label for="mensagem">Mensagem:</label><br>
-         <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
+
+         <ul>
+            <li>
+                 <label for="Nome">Nome:</label>
+                 <input type="text" id="nome" name="nomeUsuario">
+             </li>
+             <li>
+                 <label for="e-mail">E-mail:</label>
+                 <input type="text" id="e-mail" name="e-mailUsuario">
+                </li>
+             <li>
+                 <label for="mensagem">Mensagem:</label>
+                 <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
+             </li>
+         </ul>
          <input type="submit" value="Enviar">
         
     </form>
