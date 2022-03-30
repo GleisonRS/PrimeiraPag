@@ -1,7 +1,7 @@
 form {
     /*centralizar o form na pagina*/
     margin: 0 auto;
-    width: 5000px;
+    width: 350px;
     /*contorno do form*/
     padding: 1em;
     border: 1px solid #ccc;
@@ -21,14 +21,14 @@ form li+li {
 label {
     /*tamanho e alinhamento uniforme*/
     display: inline-block;
-    width: 90px;
+    width: 150px;
     text-align: right;
 }
 
 input, 
 textarea{
     font: 12px sans-serif;
-    width: 300px;
+    width: 100px;
     box-sizing: border-box;
     border: 1px solid #999;
 }
