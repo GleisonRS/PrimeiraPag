@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Document</title>
     <style>
+        .button{
+            border: none;
+            border-radius: 15px;
+            padding: 15px 25px;
+            outline: none;
+            background-color: blue;
+            color: azure;
+            font-size: 15px;
+            box-shadow: 0 6px rgb(192, 206, 204);
+            cursor: pointer;
+        }
+
+        .button:hover{
+            background-color: rgb(4, 4, 49);
+
+        }
+
+        .button:active{
+            background-color: blue;
+            box-shadow: 0 2px rgb(192, 206, 204);
+            transform: translateY(2px);
+        }
 
     </style>
  
@@ -83,8 +105,8 @@
                  <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
              </li>
          </ul>
-         <input type="submit" value="Enviar">
-         
+        <!--<input type="submit" value="Enviar">--> 
+         <button class="button">Enviar Mensagem</button>
         
     </form>
     <h2>Assuntos que estou estudando</h2>
