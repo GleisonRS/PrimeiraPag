@@ -34,21 +34,104 @@
 
        
     </style>
+     <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100%;
+    }
+
+    #navegacao-principal {
+        position: relative;
+        font-family: monospace;
+        float: left;
+        width: 100%;
+    }
+
+    #menu-principal{
+        list-style: none;
+        padding: 0;
+    }
+
+    #menu-principal li{   
+        background-color: rgb(12, 56, 201);
+        display: block;
+        float: left;
+        padding: 1rem;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
+    }
+
+    #menu-principal li a{
+        color: rgb(243, 247, 55);
+        text-decoration: none;
+    }
+
+    .dropdown {
+        visibility: hidden;
+        opacity: 0;
+        min-height: 5rem;   
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+        box-shadow: 0px 8px 16px 0px rgba(rgb(207, 219, 207), green, blue, alpha);
+    }
+
+    .dropdown li{
+        clear: both;
+        width: 100%;
+    }
+
+    #menu-principal li:hover,
+    #menu-principal li:focus-within{
+        background-color: rgb(161, 7, 7);
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+   
+
+    #menu-principal li a{
+        color: rgb(198, 248, 16);
+    }
+
+    #menu-principal li:hover>ul,
+    #menu-principal li:focus-within>ul,
+    .dropdown li:hover,
+    .dropdown li:focus {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+   
+       
+    </style>
 
 </head>
 
 <body>
-    <nav class="menu">
-        <ul>
+    <nav id="navegacao-principal">
+        <ul id="menu-principal">
             <li><a href="#home">Home</a></li>
-            <li><a href="#meus_Projetos">Meus Projetos</a></li>
-            <li><a href="#curriculo">Meu Currículo</a></li>
+            <li><a href="#">Sobre Mim</a>
+            <ul class="dropdown">
+                <li><a href="#meus-projetos">Meus Projetos</a></li>
+                <li><a href="#meus-hobbies">Meus Hobbies</a></li>
+            </ul></li>
+            <li><a href="#meu-curriculo">Meu Currículo</a></li>
             <li><a href="#contato">Entre em contato</a></li>
         </ul>
     </nav>
 
-<article id="home">
-    <h1 >Minha Primeira Página</h1>
+<article>
+    <h1 id="home" >Minha Primeira Página</h1>
 
 
     <p>
@@ -57,7 +140,7 @@
 
     <h2>Quem sou eu?</h2>
 
-    <p id="contato">
+    <p>
         Meu nome é Gleison, tenho 22 anos, moro na Lagoa do Tocantins que fica no interior do Tocantins na
         região do
         Jalapão. Em agosto de 2019 mudei para Palmas-To para servir a Marinha do Brasil, fiquei na marinha
@@ -69,7 +152,7 @@
     <blockquote>“Investir em conhecimento sempre rende os melhores juros.” –<cite>Benjamin Franklin</cite>
     </blockquote>
 
-    <h2>Meus Hobbies</h2>
+    <h2 id="meus-hobbies">Meus Hobbies</h2>
     
     <p><ul>
         <li>Correr</li>
@@ -79,10 +162,10 @@
     </ul>
     </p>
 
-    <h2>Meus Projetos</h2>
+    <h2 id="meus-projetos">Meus Projetos</h2>
     <p>Primeiramente terminar minha faculdade para conseguir um emprego estável. Focar em estudos sobre Investimentos para conhecer melhor esse mundo dos investimento da bolsa de valores, em especial os fundos imobiliários que geram renda passiva para que ao longo do tempo possar alcançar a liberdade financeira. </p>
 
-    <form action="" >
+    <form action="" id="contato" >
 
         <ul>
             <li>
@@ -93,7 +176,7 @@
                 <label for="e-mail">E-mail:</label>
                 <input type="text" id="e-mail" name="e-mailUsuario">
             </li>
-            <li id="meus_Projetos">
+            <li>
                 <label for="mensagem">Mensagem:</label>
                 <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
             </li>
@@ -117,7 +200,7 @@
     <h2>Assuntos que pretendo estudar</h2>
     <!--1. lista de 3 assuntos q pretendo ser estudado
        2. cada assunto deverá possuir um link para algum site externo que deverá ser aberto uma nova janela-->
-    <ul id="curriculo">
+    <ul>
         <li><a href="https://web.tecgraf.puc-rio.br/ftp_pub/lfm/CIV2802-ModelagemOrientadaObjetos.pdf" target="_blank"
                 rel="noopener noreferrer">Modelagem OO com UML</a></li>
         <li><a href="https://sites.google.com/site/fkbancodedados1/modelodados/der" target="_blank"
@@ -126,7 +209,7 @@
                 target="_blank" rel="noopener noreferrer">Laço de Repetição while e do-while - java</a> </li>
     </ul>
 
-    <table border="">
+    <table border="" id="meu-curriculo">
         <caption>Minha Grade Curricular</caption>
         <thead>
             <tr>
@@ -164,7 +247,7 @@
         </tbody>
   
     </table>
-</article>   
+</article>
 </body>
 
 </html>
